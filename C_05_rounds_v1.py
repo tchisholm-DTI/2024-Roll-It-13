@@ -66,12 +66,12 @@ while computer_points < 13 and user_points < 13:
         user_points += user_move
         print(f"You rolled a {user_move}. You now have {user_points} points.")
 
-        print("\nPress <enter> to continue ... ")
-        input()
+    print("\nPress <enter> to continue ... ")
+    input()
 
     # Roll die for computer and update computer points
     computer_move = roll_die()
-    computer_points = computer_move
+    computer_points += computer_move
     print(f"The computer rolled a {computer_move}. The computer"
           f" now has {computer_points}.")
 
@@ -96,5 +96,3 @@ if user_points < computer_points:
 else:
     print(f"Yay! You won the round and {user_points} points have "
           f"been added to your score")
-    
-
