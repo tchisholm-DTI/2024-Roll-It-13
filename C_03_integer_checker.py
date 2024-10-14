@@ -1,17 +1,36 @@
 # Checks that the users enter an integer
 # that is more than 13
-while True:
+def int_check(question):
 
-    error = "Please enter an integer that is 13 or more"
+    while True:
+        error = "Please enter an integer that is 13 or more"
 
-    try:
-        my_num = int(input("Enter an integer: "))
+        try:
+            response = int(input(question))
 
-        # Checks that the number is more than/equal to 13
-        if my_num < 13:
+            # Checks that the number is more than/equal to 13
+            if response < 13:
+                print(error)
+            else:
+                return response
+
+        except ValueError:
             print(error)
-        else:
-            print("Your number is ", my_num)
 
-    except ValueError:
-        print(error)
+
+# Main routine goes here
+
+# Initialise user score and computer score
+user_score = 0
+comp_score = 0
+
+target_score = int_check("Enter a target score: ")
+print(target_score)
+
+while user_score < target_score and comp_score < target_score:
+    print("Round heading goes here ... ")
+    add_points = int(input("How many points have been won?"))
+    user_score += add_points
+
+print()
+print(f"Your final score is {user_score}")
