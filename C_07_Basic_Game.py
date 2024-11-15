@@ -177,9 +177,9 @@ while user_score < target_score and comp_score < target_score:
     print()
 
     if user_points < computer_points:
-        print("Sorry - you lost this round and no points "
+        print("😢😢😢Sorry - you lost this round and no points "
               "have been added to your total score. The computer's score has "
-              f"increased by {computer_points} points.")
+              f"increased by {computer_points} points.😢😢😢")
 
         add_points = computer_points
 
@@ -189,14 +189,14 @@ while user_score < target_score and comp_score < target_score:
         if double_points == "yes":
             user_points *= 2
 
-        print(f"Yay! You won the round and {user_points} points have "
-              f"been added to your score")
+        print(f"👍👍👍Yay! You won the round and {user_points} points have "
+              f"been added to your score👍👍👍")
 
         add_points = user_points
 
     else:
-        print(f"The result for this round is a tie. You and the computer"
-              f" both have {user_points}. ")
+        print(f"👔👔👔The result for this round is a tie. You and the computer"
+              f" both have {user_points}. 👔👔👔")
 
         add_points = user_points
 
@@ -216,4 +216,4 @@ while user_score < target_score and comp_score < target_score:
         user_score += add_points
 
 print()
-print(f"User: {user_score} points | Computer: {comp_score} points")
+print(f"🎲🎲🎲User: {user_score} points | Computer: {comp_score} points🎲🎲🎲")
